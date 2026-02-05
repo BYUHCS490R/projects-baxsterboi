@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+main p {
+    color: rgb(108, 200, 200);
+}
+#second {
+    color: rgb(116, 195, 38);
+}
+.larger {
+    font-size: 20pt;
+}
+.purple {
+    color: purple;
+}
+.seperate {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: crimson;
+}
