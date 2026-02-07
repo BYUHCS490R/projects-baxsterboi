@@ -16,12 +16,16 @@ h2 {
 .emp {
     color: rgb(165, 42, 42)
 
+    
+
 }
 .demp {
     color: rgb(92, 50, 131);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #syl {
     color: rgb(37, 66, 119);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .sim {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
