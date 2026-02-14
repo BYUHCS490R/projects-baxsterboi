@@ -1,0 +1,24 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url(Sea.jpg);
+    color: darkorange;
+    background-repeat: repeat; /* repeat both x and y */
+}
+nav a {
+    color: aqua;
+}
+
+.current {
+    color: cornsilk;
+    text-decoration: none;
+}
+
+.icon {
+    list-style-image: url(Icon.png);
+}
+.decorative {
+    background-image: url(Malaysia.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 80px;
+}
