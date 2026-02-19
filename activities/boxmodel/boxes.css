@@ -1,0 +1,25 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header {
+    background-color: crimson;
+    padding: 50px 50px;
+    margin: 20px;
+}
+main {
+    background-color: deeppink;
+}
+.mainpicture {
+    background-color: firebrick;
+    width: 300px;
+    margin: 20px;
+}
+.mainpicture {
+    width: 300px
+}
+footer {
+    background-color: darkviolet;
+    border-width: 10px;
+    border-color: chartreuse;
+    border-style: groove;
+}
