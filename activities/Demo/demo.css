@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: crimson;
+}
+
+#wrapper {
+    width: 300px;
+    background-color: rgb(234, 241, 241);
+    margin: auto;
+    border: thin solid black;
+    box-shadow: 5px 5px rgb(207, 180, 180);
+}
+nav a{
+    display: inline;
+    background-color: rgb(6, 78, 78);
+    color: blueviolet;
+    padding: 5px;
+    border-bottom: thin solid #FFF;
+    margin: 5px;
+    text-decoration: none
+}
+nav a:hover {
+    text-decoration: underline;
+    background-color: beige;
+    color: cadetblue;
+}
+.clear {
+    clear: both;
+}
+
+main p {
+    background-color: 0aqua;
+    color: brown;
+    width: 250px;
+    text-align: center;
+    margin: 25px auto;
+}

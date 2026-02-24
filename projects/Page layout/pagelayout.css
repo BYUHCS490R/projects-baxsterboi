@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+}
+
+header {
+    height: 150px;
+    padding: 20px;
+    border: 3px groove rgb(15, 25, 75);
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px gray;
+    text-align: center;
+    background-image: url(luffy.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: lightgreen;
+}
+
+main {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: darkred;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid darkred;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px gray;
+    background-color: chartreuse;
+    overflow: auto;
+    text-shadow: 3px 3px 5px cadetblue;
+
+}
+
+nav {
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid darkred;
+    border-radius: 10px;
+    box-shadow: 3px 2px 5px gray;
+    text-align: center;
+    background-color: cornflowerblue;
+    
+}
+
+#wrapper {
+    width: 900px;
+    margin: auto;
+    padding: 20px;
+    border: 5px solid darkred;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: capitalize;
+    text-shadow: 3px 3px 5px gray;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px
+}
+
+figure {
+    width: 300px;
+    margin: 10px;
+    margin: 20px;
+    border: 2px solid rgb(0, 25, 139);
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px gray;
+    text-align: center;
+    float: left;
+    
+
+}
+
+footer {
+    font-family: 'Courier New', Courier, monospace;
+    height: 60px;
+    padding: 10px;
+    margin: 20px;
+    border: 2px dotted darkred;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px gray;
+    text-align: left;
+    font-weight: bold;
+    background-image: url(Catcry.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgb(246, 210, 9);
+}
+
+nav a:hover {
+    background-color: gold;
+    color: chocolate;
+}
