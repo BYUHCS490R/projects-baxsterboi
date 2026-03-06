@@ -13,12 +13,12 @@ header {
 
 header h1 {
     margin: 0;
-    background-color: darkgreen;
+    background-color: rgb(1, 66, 1);
 
 }
 
 nav {
-    background-color: rgb(43, 207, 71);
+    background-color: rgb(8, 126, 27);
     display: flex;
     justify-content: space-evenly;
 }
@@ -66,8 +66,7 @@ nav a:hover {
 .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px
-    ;
+    gap: 20px;
 }
 
 @media ONLY print {
@@ -77,4 +76,34 @@ nav a:hover {
     nav {
         display: none;
     }
+}
+
+@media ONLY screen AND (max-width: 600px) {
+    body {
+        background-color: blueviolet;
+    }
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        border-bottom: thin solid cadetblue;
+    }
+    .main-row {
+        flex-direction: column-reverse;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .row {
+        flex-flow: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+    }
+}
+
+footer {
+    background-color: darkorange;
+    padding: 20px;
 }
