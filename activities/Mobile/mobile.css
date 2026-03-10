@@ -1,20 +1,13 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
-    margin-top: 80px;
 }
 
 header {
-    position: fixed;
-    width: 200%;
-    top: 0;
+    text-align: center;
+    padding: 20px;
+    background-color: antiquewhite;
     color: white;
-}
-
-header h1 {
-    margin: 0;
-    background-color: rgb(1, 66, 1);
-
 }
 
 nav {
@@ -69,14 +62,14 @@ nav a:hover {
     gap: 20px;
 }
 
-@media ONLY print {
+@media 
     body {
         font-family: Arial, Helvetica, sans-serif;
     }
     nav {
         display: none;
-    }
 }
+
 
 @media ONLY screen AND (max-width: 600px) {
     body {

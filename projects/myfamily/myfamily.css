@@ -1,0 +1,121 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: antiquewhite;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    background-color: rgb(1, 66, 1);
+
+}
+
+nav {
+    background-color: rgb(8, 126, 27);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a {
+    padding: 15px;
+    display: block;
+    font-weight: bold;
+    color: aliceblue;
+    txt
+}
+
+nav a:hover {
+    background: #8a9398;
+}
+
+.layout {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex: 3;
+}
+
+main h2 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+article {
+    background-color: aliceblue;
+    padding: 15px;
+    flex: 1 1 30%;
+    box-shadow: 0 0 5px cadetblue;
+}
+
+article img{
+    width: 100%;
+}
+
+aside {
+    flex: 1;
+    background: antiquewhite;
+    padding: 15px;
+}
+
+aside img {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(212, 151, 71);
+    color: beige;
+}
+
+
+@media ONLY print {
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    nav {
+        display: none;
+    }
+    body {
+        background: whitesmoke;
+    }
+    footer {
+        display: none;
+    }
+}
+
+@media ONLY screen AND (max-width: 700px) {
+    body {
+        background-color: rgb(255, 255, 255);
+    }
+    nav {
+        flex-direction: column;
+        text-align: justify;
+    }
+    .layout {
+        flex-direction: column;
+    }
+    main {
+        flex-direction: column;
+    }
+    article {
+        flex: 1 1 100%;
+    }
+    aside {
+        order: 2;
+    }
+
+}
+
