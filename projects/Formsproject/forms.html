@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <header>
+        <h1>Baxster's forms</h1>
+    </header>
+    <main>
+        <form action="formprocs.html" method="post">
+            <fieldset>
+                <legend>Main Information</legend>
+                    <div class="form-row">
+                        <label for="fname">Name:</label>
+                        <input type="text" name="fullname" id="fname">
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email:</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div class="form-row">
+                        <label for="dateInput">Birthdate:</label>
+                        <input type="date" name="birthdate" id="password">
+                    </div>
+                    <div class="form-row">
+                        <label for="password">Password:</label>
+                        <input type="password" name="pass" id="password">
+                    </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Sign Up Information</legend>
+                    <div class="form-row">
+                        <label>Gender:</label>
+                            <div class="radio">
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Male</label>
+
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label>
+                            </div>
+                    </div>
+                    <div class="form-row">
+                        <label for="state">State:</label>
+                             <select name="state" id="state">
+                                 <option value="blank">......</option>
+                                 <option value="CA">california</option>
+                                 <option value="AZ">Arizona</option>
+                                <option value="UT">Utah</option>
+                            </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-row">
+                        <label></label>
+                            <div class="checkbox">
+                                <input type="checkbox" id="agree">
+                                <label for="agree">I agree to the term</label>
+                            </div>
+                    </div>
+                     <div class="form-row">
+                        <label for="comments">Comments:</label>
+                        <textarea name="comments" id="comments"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="spacer"></div>
+                        <input type="submit" value="sign up">
+                    </div>
+            </fieldset>
+
+        </form>
+    </main>
+    <footer>
+       <p>&copy;Baxster Jimmy 2026</p> 
+    </footer>
+</body>
+</html>

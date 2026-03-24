@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: cadetblue;
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+    color: aliceblue;
+}
+
+main {
+    padding: 20px;
+}
+
+form {
+    background-color: rgb(142, 240, 183);
+    padding: 25px;
+    margin: auto;
+    box-shadow: 5px 5px 3px gray ;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-row {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    width: 150px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.spacer {
+    width: 150px;
+    text-align: right;
+    gap: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.radio {
+    color: rgb(39, 25, 102);
+}
+
+Input[type="radio"] {
+    cursor: pointer;
+}
+
+.checkbox {
+    color: darkblue;
+}
+
+Input[type="checkbox"] {
+    accent-color: green;
+    cursor: crosshair;
+}
+
+
+input:not([type='submit']), select, textarea {
+    padding: 10px;
+    font-size: 1.5em;
+    border-radius: 3px;
+    background-color: rgb(24, 200, 212);
+}
+
+input:not([type='submit']):focus, select:focus, textarea:focus {
+        background-color: rgb(233, 221, 221);
+}
+input[type='submit'] {
+    padding: 10px;
+    background-color: rgb(79, 88, 85);
+    color: aliceblue;
+}
+
+fieldset {
+    border: 2px solid rgb(139, 57, 57);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+legend {
+    font-weight: bold;
+    background-color: rgb(196, 158, 110);
+    padding: 10px;
+}
+
+footer {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 17px;
+    background-color: rgb(136, 128, 211);
+    padding: 17px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+@media only screen and (max-width: 600px) {
+    .form-row, .check-row {
+        flex-direction: column;
+    }
+    .form-row {
+        text-align: left;
+    }
+    .spacer {
+        text-align: left;
+    }
+}

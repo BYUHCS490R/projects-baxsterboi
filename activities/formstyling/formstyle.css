@@ -2,15 +2,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.form-row, .check-row {
+.form-row {
     display: flex;
     gap: 10px;
-    margin: 10px 0;
+    margin-bottom: 5px;
 }
 
-.form-row label {
+.form-row > label {
     width: 150px;
     text-align: right;
+    margin-bottom: ;
 }
 
 .spacer {
@@ -47,12 +48,10 @@ legend {
     .form-row, .check-row {
         flex-direction: column;
     }
-}
-
-.form-row {
+    .form-row {
     text-align: left;
-}
-
-.spacer {
+    }
+    .spacer {
     text-align: left;
+    }
 }
