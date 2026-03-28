@@ -11,12 +11,12 @@
         <h1>Baxster's form</h1>
     </header>
     <main>
-        <form action="formprocs.html" method="post"> 
+        <form id="myForm" formprocs.html" method="post"> 
             <fieldset>
                 <legend>Sign up</legend>
             <div class="form-row">
                 <label for="fname">Name:</label>
-                <input type="text" name="fullname" id="fname">
+                <input type="text" name="fullname" id="fullname">
             </div>
             <div class="form-row">
                 <label for="email">Email:</label>
@@ -24,11 +24,11 @@
             </div>
             <div class="form-row">
                 <label for="dateInput">Birthdate:</label>
-                <input type="date" name="birthdate" id="password">
+                <input type="date" name="birthdate" id="age">
             </div>
             <div class="form-row">
                 <label for="password">Password:</label>
-                <input type="password" name="pass" id="password">
+                <input type="password" name="pass" id="pass">
             </div>
             
             <div class="form-row">
@@ -100,7 +100,23 @@
             };
 
             console.log(formDate);
-        })
+            const xhr = new XMLHttpRequest();
+            xhr.open("Get", "submit.json", true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert("Form submitted successfully!");
+                    const response = JSON.parse(xhr.responseText);
+                    console.log(response);
+                    //document.getElementById('myForm').reset();
+                    document.getElementById('myForm').innerHTML = '';
+                    document.getElementById('message').innerText = response.message;
+                } else if (xhr.readyState === 4) {
+                    alert("Error submitting form.");
+                }
+            };
+            xhr.send(JSON.stringify(formDate));
+        });
         
     </script>
 </body>
