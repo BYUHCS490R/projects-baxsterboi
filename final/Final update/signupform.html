@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The world of Sport</title>
+    <link rel="stylesheet" href="update.css">
+</head>
+<body>
+    <header>
+        <h1>Tournament Registeration</h1>
+    </header>
+    <nav>
+        <a href="homepage.html">Homepage</a>
+        <a href="history.html">History</a>
+        <a href="types.html">Types</a>
+        <a href="rules.html">Rules</a>
+        <a href="ranking.html">Ranking</a>
+        <a href="signupform.html" class="current">Sign up</a>
+    </nav>
+    <main>
+        <h2>Local Volleyball Tournament sheet</h2>
+
+        <div id="message"></div>
+        <form id="myForm"action="formprocs.html" method="post">
+            <fieldset>
+                <legend>Information</legend>
+                    <div class="sign-row">
+                        <label for="fname">Your Fullname:</label>
+                        <input type="text" name="fullname" id="fullname">
+                    </div>
+                    <div class="sign-row">
+                        <label for="email">Your Email:</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div class="sign-row">
+                        <label for="dateInput">Birthdate:</label>
+                        <input type="text" name="birthdate" id="age">
+                    </div>
+                    <div class="sign-row">
+                        <label for="password">Your Password:</label>
+                        <input type="password" name="pass" id="password">
+                    </div>
+                    <div class="sign-row">
+                        <label for="comments">Your Comments:</label>
+                        <textarea name="Your comments" id="comment"></textarea>
+                    </div>
+                    <div class="sign-row">
+                        <div>
+                        <input type="checkbox" id="agree">
+                        <label for="Agree">I agree to all terms</label>
+                        </div>
+                    </div>
+                    <div class="sign-row">
+                        <div class="spacer"></div>
+                        <input type="submit" value="sign up">
+                    </div>
+
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>&copy;2026 Baxster Jimmy</p>
+    </footer>
+        <script>
+        document.getElementById("myForm").addEventListener("submit",function(event) {
+            event.preventDefault();
+            //alert("Form Submitted");
+
+            const fullname = document.getElementById("fullname").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const age = document.getElementById("age").value;
+
+            if (!fullname || !email) {
+                alert("You need a name and email.");
+                return;
+            }
+
+            const ageValue = parseInt(age);
+            if (isNaN(ageValue) || ageValue < 18) {
+                alert("You need to be 18.");
+                return;
+
+            }
+            const formDate = {
+                name: fullname,
+                email: email,
+                password: password,
+                age: age,
+            };
+
+            console.log(formDate);
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "submit.json", true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert("Form submitted successfully!");
+                    const response = JSON.parse(xhr.responseText);
+                    console.log(response);
+                    //document.getElementById('myForm').reset();
+                    document.getElementById('myForm').innerHTML = '';
+                    document.getElementById('message').innerText = response.message;
+                } else if (xhr.readyState === 4) {
+                    alert("Error submitting form.");
+                }
+            };
+            xhr.send(JSON.stringify(formDate));
+        });
+        
+    </script>
+</body>
+</html>
