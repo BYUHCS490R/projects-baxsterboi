@@ -9,48 +9,129 @@ header {
     padding: 20px;
     color: rgb(255, 255, 255);
     text-align: center;
-    border: 3px groove gray;
-    border-radius: 15px;
 }
 
 .wrapper {
     display: flex;
     gap: 20px;
-    padding: 20px;
+    padding: 20px;   
+    width: 100%;
+    align-items: center;
+    max-width: 1200%;
+    text-align: center;
+}
+
+.homepage {
+    display: flex;
+    gap: 20px;
+    padding: 20px;   
+    width: 100%;
+    align-items: center;
+    max-width: 1200%;
+}
+
+.left-space {
+    width: 20%;
+    padding: 15px;
+}
+
+.middle-space {
+    margin-bottom: 300px;
+}
+
+.box {
+    width: 250px;
+    height: 250px;
+    padding: 15px;
+    border: 1px solid black;
+    background-color: cornflowerblue;
+    margin-bottom: 200px;
+    text-align: center;
+}
+
+.box2 {
+    width: 300px;
+    height: 380px;
+    padding: 15px;
+    border: 1px solid black;
+    background-color: cornflowerblue;
+    margin-bottom: 200px;
+    text-align: center;
 }
 
 h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+figure img {
+    width: 80%;
+    max-width: 250px;
+    align-items: center;
+}
+
+figcaption {
+    font-size: 14px;
 }
 
 nav {
-    margin: 20px;
     padding: 10px;
     border: 2px solid rgb(66, 66, 126);
-    border-radius: 10px;
     text-align: center;
-    background-color: aqua;
-    box-shadow: 3px 2px 5px gray; 
+    background-color: rgb(61, 82, 82);
+    margin: 0;
 }
 
 nav a {
     font-size: 17px;
-    margin: 10px;
     font-weight: bold;
+    text-decoration: none;
+    margin: 25px;
+    color: white;
 }
 
 nav a:hover {
-    background-color: brown;
-    color: aquamarine;
+    background-color: rgb(49, 148, 70);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 main {
     flex: 1;
+    width: 500px;
+    margin-left: 10px;
+}
+
+p {
+    flex: 2;
+}
+
+h2 {
+    text-align: center;
+}
+
+iframe {
+    border: 5px solid gray;
+    align-items: center;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 aside {
     padding: 20px;
-    background: antiquewhite;
     height: 310px;
     margin: 10px;
 }
@@ -61,6 +142,9 @@ article {
     flex: 1 1 30%;
     margin-bottom: 20px;
     box-shadow: 0 0 5px rgb(99, 3, 253);
+    padding: 20px;
+    width: 70%;
+    margin: 20px auto;
 }
 
 article img {
@@ -68,7 +152,7 @@ article img {
 }
 
 .current {
-    color: rgb(241, 5, 5);
+    color: rgb(12, 25, 63);
     text-decoration: none;
 }
 
@@ -76,6 +160,9 @@ article img {
     border: 2px solid black;
     background-color: azure;
     caption-side: bottom;
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
 }
 
 .ranking thead, .ranking tfoot {
@@ -85,47 +172,49 @@ article img {
 .ranking td {
     border-bottom: 1px solid white;
     text-align: left;
+    border: 1px solid black;
 }
 
 legend {
-    color: white;
+    color: rgb(2, 0, 0);
+
 }
 
 form {
-    background-color: darkkhaki;
+    background-color: rgb(207, 157, 157);
     padding: 25px;
-    margin: auto;
-    max-width: 400px;
+    margin: 20px auto;
+    width: 80%;
     border-radius: 10px;
+}
+
+fieldset {
+    padding: 30px;
 }
 
 .sign-row {
     margin: 15px;
-    display: flex;
+    display: grid;
 }
 
 .sign-row label {
     width: 150px;
-    text-align: right;
+    text-align: left;
 }
 
 label {
     font-weight: bold;
 }
 
-.spacer {
-    width: 150px;
-    text-align: right;
-    gap: 10px;
-    align-items: center;
-    display: flex;
+.checkrow {
 }
 
+
 footer {
-    padding: 15px;
+    padding: 10px;
+    color: white;
     text-align: center;
-    background-color: coral;
-    margin: 10px;
+    background-color: rgb(116, 37, 11);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -140,6 +229,11 @@ footer {
         text-align: justify;
         align-items: center;
     }
+
+    nav a {
+        margin: 10px;
+    }
+
     .wrapper {
         flex-direction: column;
     }
@@ -149,11 +243,10 @@ footer {
     article {
         flex: 1 1 100%;
     }
-    aside {
-        order: 2;
-    }
-    .sign-row {
-        flex-direction: column;
-    }
 
-}
+    .homepage {
+        flex-direction: column;
+        width: 80%;
+        margin: 20px auto;
+        display: flex;
+    }
